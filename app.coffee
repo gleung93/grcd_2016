@@ -4,6 +4,7 @@ autoprefixer = require 'autoprefixer-stylus'
 contentful   = require 'roots-contentful'
 config       = require './contentful'
 marked       = require 'marked'
+sass		 = require 'roots-sass'
 
 module.exports =
   ignores: [
@@ -17,4 +18,4 @@ module.exports =
   locals:
     marked: marked
 
-  extensions: [contentful(config)]
+  extensions: [sass(files: "assets/css/master.scss", out: 'css/master.css', style: 'compressed'), contentful(config)]

@@ -1,6 +1,3 @@
-New test
-
-A test project
 
 Setup
 -----
@@ -9,13 +6,25 @@ Setup
 - clone this repo down and `cd` into the folder
 - run `npm install`
 - run `roots watch`
-- ???
-- get money
+- it should automatically load in the browser
 
 
 Deployment
 ----------
 
-This site is hosted at Netlify.
+Cuurently depyoing to netlify.com
 
-Run `make deploy` to deploy the site. This command is a shortcut for compiling the site with roots and deploying using [ship](https://github.com/carrot/ship). See the [Makefile](Makefile) for more info.
+Push to the master branch to trigger a build and deploy on netlify
+
+
+To Make Changes
+----------
+- Open terminal
+- cd to this repo
+- git pull origin
+- get checkout -b nameOfNewBranch
+- Make changes in your text editor, etc
+- git add -all
+- git commit -m "info about what you changed"
+- git push origin
+- to be continued

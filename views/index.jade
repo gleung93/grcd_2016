@@ -2,15 +2,9 @@ extends layout
 
 block content
   h3 Students
-  :markdown
-    Contains links to project pages
-
-  // Once you've added a content type and posts into Contentful
-  // go update your app.coffee config and then test out iterating
-  // over your content type here!
-
-  ul
+  p links to project pages
+  ul.thumbnails
     - for post in contentful.posts
       li
         a(href= post._url) 
-          img(src= asset(post.profilePic))
+          img(src= asset(post.heroImage))

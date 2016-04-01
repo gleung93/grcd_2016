@@ -6,7 +6,8 @@ html
     meta(name='description', content='description of your site')
     meta(name='author', content= "author of the site")
     title= path
-    link(rel='stylesheet', href='css/master.css')
+    block styles
+      link(rel='stylesheet', href='css/master.css')
   body
     block content
 

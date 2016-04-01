@@ -1,3 +1,25 @@
-h2= entry.studentName
-h4= entry.projectName
-p= entry.projectDescription
+extends layout
+
+block styles
+  link(rel='stylesheet', href='../css/master.css')
+
+block content
+  img(src= asset(entry.heroImage))  
+  img(src= asset(entry.portrait))
+  h2= entry.studentName
+  h4= entry.focus
+  h4= entry.skills
+  
+  h1= entry.titleOfCapstone
+  p= entry.capstoneDescription
+  ul
+    - for projectImages in entry.projectImages
+      li
+        img(src= asset(projectImages))
+  
+  ul.thumbnails
+    - for post in contentful.posts
+      li
+        a(href= post._url) 
+          img(src= asset(post.heroImage))
+  

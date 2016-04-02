@@ -4,8 +4,15 @@ block styles
   link(rel='stylesheet', href='../css/master.css')
 
 block content
-  img(src= asset(entry.heroImage))  
+  -var smallhero = asset(entry.heroImage, {w: 640, q: 100})
+  -var mediumhero = asset(entry.heroImage, {w: 1200, q: 100})
+  -var largehero = asset(entry.heroImage, {w: 2400, q: 100})
+  -var heroSrc = largehero + ' ' + '2400w' + ', ' + mediumhero + ' ' + '1200w' + ', ' + smallhero + ' ' + '640w'
+  
+  
+  img(src= mediumhero srcset= heroSrc)
   img(src= asset(entry.portrait))
+  p= sourceset
   h2= entry.studentName
   h4= entry.focus
   h4= entry.skills
@@ -17,9 +24,14 @@ block content
       li
         img(src= asset(projectImages))
   
+  //ul
+    //- for listVideo in entry.listVideo
+      //li= listVideo
+  
   ul.thumbnails
     - for post in contentful.posts
       li
         a(href= post._url) 
           img(src= asset(post.heroImage))
+          
   

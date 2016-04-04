@@ -18,4 +18,9 @@ module.exports =
   locals:
     marked: marked
 
-  extensions: [sass(files: "assets/css/master.scss", out: 'css/master.css', style: 'compressed'), contentful(config)]
+  extensions: [
+    sass(
+      files: "assets/css/master.scss",
+      out: 'css/master.css',
+      style: 'compressed'),
+    contentful(config)]

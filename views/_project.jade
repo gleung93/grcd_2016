@@ -19,7 +19,7 @@ block content
   
   h1= entry.titleOfCapstone
   p= entry.capstoneDescription
-  ul
+  ul.project_image_list
     - for projectImages in entry.projectImages
       li
         img(src= asset(projectImages))

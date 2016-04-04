@@ -3,8 +3,10 @@ extends layout
 block content
   h3 Students
   p links to project pages
-  ul.thumbnails
+  ul#thumbnails
     - for post in contentful.posts
       li
         a(href= post._url) 
           img(src= asset(post.heroImage))
+        p= post.studentName
+  button#sort

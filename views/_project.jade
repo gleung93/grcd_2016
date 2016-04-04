@@ -10,28 +10,36 @@ block content
   -var heroSrc = largehero + ' ' + '2400w' + ', ' + mediumhero + ' ' + '1200w' + ', ' + smallhero + ' ' + '640w'
   
   
-  img(src= mediumhero srcset= heroSrc)
-  img(src= asset(entry.portrait))
-  p= sourceset
-  h2= entry.studentName
-  h4= entry.focus
-  h4= entry.skills
+  .hero-image(style='background-image: url(#{mediumhero})')
+  //img(src= mediumhero srcset= heroSrc)
+  .project.wrapper
+    .project-container
+      .info
+        .person-info
+          img.portrait(src= asset(entry.portrait))
+          h3= entry.studentName
+          h4= entry.focus
+          p= entry.skills
+          a= entry.portfolioWebsiteLink
+          hr.mobile-divider
+        .project-info    
+          h1= entry.titleOfCapstone
+          h2= entry.subtitle
+          p= entry.capstoneDescription
+      .project
+        ul.project_image_list
+          - for projectImages in entry.projectImages
+            li
+              img(src= asset(projectImages))
+      
+      //ul
+        //- for listVideo in entry.listVideo
+          //li= listVideo
   
-  h1= entry.titleOfCapstone
-  p= entry.capstoneDescription
-  ul.project_image_list
-    - for projectImages in entry.projectImages
-      li
-        img(src= asset(projectImages))
-  
-  //ul
-    //- for listVideo in entry.listVideo
-      //li= listVideo
-  
-  ul.thumbnails
-    - for post in contentful.posts
-      li
-        a(href= post._url) 
-          img(src= asset(post.heroImage))
+  //ul.thumbnails
+    //- for post in contentful.posts
+      //li
+        //a(href= post._url) 
+          //img(src= asset(post.heroImage))
           
   

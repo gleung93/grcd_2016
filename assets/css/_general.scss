@@ -10,3 +10,13 @@
 body {
 	font-family: helvetica, arial, sans-serif;
 }
+
+.item {
+	position: relative;
+}
+
+.full-link {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+}

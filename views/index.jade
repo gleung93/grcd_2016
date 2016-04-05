@@ -1,12 +1,29 @@
 extends layout
 
 block content
-  h3 Students
-  p links to project pages
-  ul#thumbnails
-    - for post in contentful.posts
-      li
-        a(href= post._url) 
-          img(src= asset(post.heroImage))
-        p= post.studentName
-  button#sort
+  .intro-wrapper
+    .text
+      .text-card
+        h1 Meet the Class of 2016
+        h4 72 students, all with a story to tell.
+        hr
+        .center
+          .filter-home.all.active(data-filter='all') Everyone
+          .filter-home.graphic(data-filter='.Graphic') Graphic
+          .filter-home.motion(data-filter='.Motion') Motion
+          .filter-home.interaction(data-filter='.Interaction') Interaction
+    img.graphic-image(src= 'img/graphic_pattern.png')
+    img.motion-image(src= 'img/motion_pattern.png')
+    img.interaction-image(src= 'img/interaction_pattern.png')
+  
+  .wrapper
+    #Container.container
+      - for post in contentful.posts
+        .item.mix(class= post.focus)
+          a.full-link(href= post._url)
+          .card-wrapper
+            .image
+              img#img(src= asset(post.heroImage))
+            .card-content
+              span.project= post.titleOfCapstone
+              span.name= post.studentName

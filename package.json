@@ -12,6 +12,7 @@
     "roots-sass": "^1.0.0",
     "rupture": "0.6.x",
     "ship": "0.2.x",
+    "string": "^3.3.1",
     "stylus": "0.50.x"
   }
 }

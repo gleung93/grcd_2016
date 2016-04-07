@@ -1,8 +1,5 @@
 extends layout
 
-block styles
-  link(rel='stylesheet', href='../css/master.css')
-
 block content
   -var smallhero = asset(entry.heroImage, {w: 640, q: 100})
   -var mediumhero = asset(entry.heroImage, {w: 1200, q: 100})
@@ -20,7 +17,7 @@ block content
           h3= entry.studentName
           h4= entry.focus
           p= entry.skills
-          a= entry.portfolioWebsiteLink
+          a(href= entry.portfolioWebsiteLink)= entry.portfolioWebsiteLink
           hr.mobile-divider
         .project-info    
           h1= entry.titleOfCapstone
@@ -31,6 +28,18 @@ block content
           - for projectImages in entry.projectImages
             li
               img(src= asset(projectImages))
+              
+  .wrapper
+    #Container.container
+      - for post in contentful.posts
+        .item.mix(class= post.focus)
+          a.full-link(href= post._url)
+          .card-wrapper
+            .image
+              img#img(src= asset(post.heroImage))
+            .card-content
+              span.project= post.titleOfCapstone
+              span.name= post.studentName
       
       //ul
         //- for listVideo in entry.listVideo

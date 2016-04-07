@@ -6,4 +6,4 @@ module.exports =
       posts:                          # data will be made available through this key on the `contentful` object in your templates
         id: 'capstoneEntryForm'                    # ID of your content type
         template: 'views/_project.jade'  # if present a single page view will be created for each entry in the content type
-        path: (entry) -> "project/#{entry.studentName}"             # override function for generating single page file path, passed in the entry object
+        path: (entry) -> "#{entry.studentName}"             # override function for generating single page file path, passed in the entry object

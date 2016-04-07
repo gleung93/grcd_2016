@@ -19,11 +19,11 @@ block content
   .wrapper
     #Container.container
       - for post in contentful.posts
-        .item.mix(class= post.focus)
-          a.full-link(href= post._url)
-          .card-wrapper
-            .image
-              img#img(src= asset(post.heroImage))
-            .card-content
-              span.project= post.titleOfCapstone
-              span.name= post.studentName
+        a(href= post._url)
+          .item.mix(class= post.focus)
+            .card-wrapper
+              .image
+                img#img(src= asset(post.portrait))
+              .card-content
+                span.project= post.titleOfCapstone
+                span.name= post.studentName

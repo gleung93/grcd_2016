@@ -32,11 +32,11 @@ block content
   .wrapper
     #Container.container
       - for post in contentful.posts
-        .item.mix(class= post.focus)
-          a.full-link(href= post._url)
+        - var lastName = post.studentName.split(" ")[1];
+        a.item.mix(href= post._url, class= post.focus, data-name= lastName)
           .card-wrapper
             .image
-              img#img(src= asset(post.heroImage))
+              img#img(src= asset(post.portrait))
             .card-content
               span.project= post.titleOfCapstone
               span.name= post.studentName

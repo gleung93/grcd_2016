@@ -4,7 +4,7 @@ autoprefixer = require 'autoprefixer-stylus'
 contentful   = require 'roots-contentful'
 config       = require './contentful'
 marked       = require 'marked'
-sass		 = require 'roots-sass'
+sass		     = require 'roots-sass'
 
 module.exports =
   ignores: [

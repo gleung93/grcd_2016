@@ -1,7 +1,6 @@
 define(["jquery", "mixitup"], function($) {
 
   $( document ).ready(function() {
-    sortAlpha('thumbnails');
     var filterState;
     var graphicState = true;
     var motionState = true;
@@ -12,12 +11,11 @@ define(["jquery", "mixitup"], function($) {
       	animation: {
         duration: 300,
         effects: 'fade stagger(120ms) translateX(14%)',
-        easing: 'ease'
+        easing: 'ease',
         },
-        // load: {
-        //   // filter: '.category-1,.category-2,.category-3',
-        //   sort: 'my-order:asc'
-        // },
+        load: {
+          sort: 'name:asc'
+        },
         controls: {
 
         },
@@ -55,15 +53,4 @@ define(["jquery", "mixitup"], function($) {
 
     });
   });
-
-  function sortAlpha(ul){
-    console.log("sortingAlpha");
-    var mylist = $('#'+ul);
-    var listitems = mylist.children('li').get();
-    listitems.sort(function(a, b) {
-       return $(a).children('p').text().toUpperCase().localeCompare($(b).children('p').text().toUpperCase());
-    })
-    $.each(listitems, function(idx, itm) { mylist.append(itm); });
-  }
-
 });

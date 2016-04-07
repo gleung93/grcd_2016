@@ -216,13 +216,13 @@ hr{
   /*display: none; <-- uncomment this rule for use with MixItUp */
 }
 
-.container .item:hover .card-content .name.graphic{
+a.item.Graphic:hover .name {
 	color:#EFBC1B;
 }
-.container .item:hover .card-content .name.interaction{
+a.item.Interaction:hover .name {
 	color:#57C1A5;
 }
-.container .item:hover .card-content .name.motion{
+a.item.Motion:hover .name {
   color:#D83A91;
 }
 .card-wrapper{
@@ -482,13 +482,13 @@ footer{
   .info .project-info{
     width:100%;
     order: 2;
-    
+
   }
   .info .person-info{
     width:100%;
     order: 1;
     margin-bottom: 0em;
-    
+
   }
   .info .person-info hr{
     display: block;
@@ -517,4 +517,3 @@ footer{
     width: 32%;
   }
 }
-

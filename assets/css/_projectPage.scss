@@ -128,12 +128,13 @@ header img{
   /*display: none; <-- uncomment this rule for use with MixItUp */
 }
 
+/*
 .container .item:hover .card-content .name.graphic{
 	color:#EFBC1B;
 }
 .container .item:hover .card-content .name.interaction{
 	color:#57C1A5;
-}
+}*/
 .card-wrapper{
 	transition: all .2s ease-in;
 }
@@ -363,7 +364,7 @@ footer{
 
 .project ul{
   list-style: none;
-  padding: none;
+  padding: 0;
 }
 
 .project img{

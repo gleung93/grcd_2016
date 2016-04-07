@@ -1,0 +1,32 @@
+.message404 {
+  position: relative;
+  top: 0;
+  right:0;
+  left: 0;
+  bottom: 0;
+}
+
+.message404 {
+  width: 100%;
+  max-width: 640px;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.message404 img {
+  width: 40%;
+  max-width: 320px;
+}
+
+.message404 h1 {
+  font-size: 64px;
+  margin: 0;
+}
+
+.message404 h2 {
+  color: #9F9F9F;
+  font-weight: 400;
+}

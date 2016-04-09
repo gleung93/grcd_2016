@@ -5,9 +5,18 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
     meta(name='description', content='description of your site')
     meta(name='author', content= "author of the site")
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
     title= path
     link(rel='stylesheet', href='css/master.css')
+    link(rel='stylesheet', href='css/master.css')
+    link(rel='icon', type='image/png', href='img/favicon.png')
   body
+    header
+      #img_wrap.static
+        a(href="index.html")
+          img#animated(src="img/logoanimated.gif")
+          img#static(src="img/logo.png")
+
     block content
 
 

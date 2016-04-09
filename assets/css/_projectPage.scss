@@ -1,72 +1,131 @@
 /*Project Page*/
+
+//For bottom Nav
 .container .item.project{
   width:24%;
 }
+
+//Start PRoject
 .hero-image{
     width: 100%;
-    margin: 0 auto;
     height: 400px;
     margin-top: 80px;
-    overflow: hidden;
     background-size: cover;
     background-position: center center;
 }
 .project.wrapper{
   min-height: 1200px;
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  margin-top: 0px;
   padding: 2em;
 }
+
 .info{
   width:100%;
   min-height:400px;
 }
-.info hr{
-  margin: 1em 0 0 0;
-  opacity: 0.2;
 
-}
+//start person info
 .info .person-info{
   vertical-align: top;
+  position: relative;
   width:32%;
   display: inline-block;
   margin-right: 1%;
   height:100%;
 
 }
-.person-info a{
-  position:relative;
-  
+
+.info .person-info p{
+  font-size: 1em;
+  color:$light-gray;
 }
-.person-info a:before{
+
+.info .person-info h3{
+  font-size: 1.25em;
+  margin-bottom: 0;
+}
+.info .person-info h4{
+  font-size: 1em;
+  margin-top: .5em;
+  text-transform: uppercase;
+  font-weight: normal;
+  letter-spacing: .2px;
+  margin-bottom: .25em;
+}
+
+.info .person-info a{
+  position:relative;
+}
+
+.info .person-info a:before{
       content: "";
       position: absolute;
       width: 100%;
-      height: 2px;
+      height: 0px;
       bottom: 0;
       left: 0;
-      background-color: $light-gray;
-      visibility: hidden;
-      -webkit-transform: translateY(8px);
-      transform: translateY(8px);
-      -webkit-transition: all 0.1s ease-in 0s;
-      transition: all 0.1s ease-in 0s;
+      opacity: 0;
+      @include transform(translateY(10px));
+      @include transition(all 0.2s ease-out);
   }
-.person-info a:hover:before{
-  visibility: visible;
+
+.info .person-info.Motion a:before{
+  background-color: $motion
+}
+.info .person-info.Graphic a:before{
+  background-color: $graphic
+}
+.info .person-info.Interaction a:before{
+  background-color: $interaction
+}
+
+.info .person-info a:hover:before{
+  opacity: 1;
+  height: 2px;
   -webkit-transform: translateY(3px);
   transform: translateY(3px);
 }
 
-.person-info .portrait{
+.info .person-info .portrait{
   vertical-align: top;
+  position: relative;
   width:214px;
   height:214px;
   background-color: rgb(250,250,250);
   margin-bottom: 0;
 }
 
+.info .person-info .portrait img{
+  width: 100%;
+  height: auto;
+}
+
+//Adds Icon
+.info .person-info .portrait:before{
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  left: 0;
+  height: 50px;
+  width: 50px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.info .person-info.Motion .portrait:before{
+  background-image: url("../img/motion.svg");
+}
+.info .person-info.Graphic .portrait:before{
+  background-image: url("../img/graphic.svg");
+  bottom: -15px;
+}
+.info .person-info.Interaction .portrait:before{
+  background-image: url("../img/interaction.svg");
+}
+
+//Start Project
 .info .project-info{
   width: 64%;
   display: inline-block;
@@ -85,84 +144,96 @@
   margin: 0.5em 0;
   font-weight: normal;
   margin-bottom: 1em;
-  
+
 }
 .info .project-info p{
   font-size: 1.25em;
   line-height: 160%;
   color:$light-gray;
 }
-.info .person-info p{
-  font-size: 1em;
-  color:$light-gray;
 
-}
-.info .person-info hr{
-  display: none;
-}
-.info .person-info h3{
-  font-size: 1.25em;
-  margin-bottom: 0;
-}
-.info .person-info h4{
-  font-size: 1em;
-  margin-top: .5em;
-  text-transform: uppercase;
-  font-weight: normal;
-  letter-spacing: .2px;
-  margin-bottom: .25em;
-}
-
-.project ul{
+//Start image list
+ul.project_image_list{
+  width: 100%;
   list-style: none;
   padding: 0;
-  :last-child{
-    img{
-      margin-bottom: 0;
-    }
-    
-  }
+}
+
+ul.project_image_list li{
+  margin-bottom: 20px;
 }
 
 .project_image_list img {
   width: 100%;
 }
 
+//for Video Embed
+.embed-container {
+  position: relative;
+  margin: 20px 0;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
 /*MEDIA QUERIES*/
-@media all and (max-width:720px){
-    .info .project-info{
-    width:100%;
-    order: 2;
-    margin-left: 0;
-
-  }
-  .project.wrapper{
-    padding:.5em;
-  }
-  .container .item.project{
-    width:48%;
-
-  }
-  .info .person-info{
-    width:100%;
-    order: 1;
-    margin-bottom: 0em;
-
-  }
-}
-@media all and (min-width: 720px){
-  .container .item,
-  .container .gap{
-    width: 32%;
-  }
-}
-
 @media all and (min-width: 1200px){
   .container .item,
   .container .gap{
     width: 32%;
   }
 }
+
+@media all and (max-width:720px){
+    .info .project-info{
+    width:100%;
+    margin-left: 0;
+
+  }
+  .project.wrapper{
+    padding:.5em;
+  }
+  .container .item.2{
+    width:48%;
+
+  }
+  .info .person-info{
+    width:100%;
+    padding-bottom: 20px;
+    margin-bottom: 0em;
+
+  }
+  .info .person-info:after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    border-top: 1px solid $light-gray
+
+  }
+
+  .info .person-info .portrait{
+    float: left;
+    margin-right: 0.5em;
+  }
+
+  .container .item,
+  .container .gap{
+    width: 32%;
+  }
+}
+
 @media all and (max-width: 520px){
   .container .item.project{
     width:100%;
@@ -180,5 +251,9 @@
   .info .person-info hr{
     display: block;
   }
-}
 
+  .info .person-info .portrait{
+    float: none;
+    margin-right: 0em;
+  }
+}

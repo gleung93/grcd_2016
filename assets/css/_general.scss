@@ -5,19 +5,17 @@ $interaction: #57C1A5;
 $motion: #D83A91;
 $graphic: #EFBC1B;
 
-#thumbnails img {
-	width: 200px;
-	height: auto;
-}
-
-.project_image_list img {
-	width: 1200px;
+*{
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
 	font-family: helvetica, arial, sans-serif;
 	color: $dark-gray;
 }
+
 a{
 	text-decoration: none;
 	color:$dark-gray;

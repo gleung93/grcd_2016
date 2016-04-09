@@ -7,28 +7,34 @@ block content
   -var largehero = asset(entry.heroImage, {w: 2400, q: 100})
   -var heroSrc = largehero + ' ' + '2400w' + ', ' + mediumhero + ' ' + '1200w' + ', ' + smallhero + ' ' + '640w'
   
+  -var portfolioLink = "http://"+entry.portfolioWebsiteLink
+  -var videoLink = "//player.vimeo.com/video/"+entry.EmbedVideo
+  
+  
   
   .hero-image(style='background-image: url(#{hero})')
   //img(src= mediumhero srcset= heroSrc)
   .project.wrapper
-    .project-container
-      .info
-        .person-info
-          img.portrait(src= asset(entry.portrait))
-          h3= entry.studentName
-          h4= entry.focus
-          p= entry.skills
-          a(href= entry.portfolioWebsiteLink)= entry.portfolioWebsiteLink
-          hr.mobile-divider
-        .project-info    
-          h1= entry.titleOfCapstone
-          h2= entry.subtitle
-          p= entry.capstoneDescription
-      .project
-        ul.project_image_list
-          - for projectImages in entry.projectImages
-            li
-              img(src= asset(projectImages))
+    .info
+      .person-info(class= entry.focus)
+        .portrait
+          img(src= asset(entry.portrait))
+        h3= entry.studentName
+        h4= entry.focus
+        p= entry.skills
+        a(href= portfolioLink, target="_blank")= entry.portfolioWebsiteLink
+      .project-info    
+        h1= entry.titleOfCapstone
+        h2= entry.subtitle
+        p= entry.capstoneDescription
+    .project
+      if entry.EmbedVideo
+        .embed-container
+          iframe(src=videoLink, frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
+      ul.project_image_list
+        - for projectImages in entry.projectImages
+          li
+            img(src= asset(projectImages))
               
   .wrapper
     hr

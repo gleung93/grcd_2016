@@ -1,13 +1,14 @@
 extends layout
 
 block content
+  -var hero = asset(entry.heroImage)
   -var smallhero = asset(entry.heroImage, {w: 640, q: 100})
   -var mediumhero = asset(entry.heroImage, {w: 1200, q: 100})
   -var largehero = asset(entry.heroImage, {w: 2400, q: 100})
   -var heroSrc = largehero + ' ' + '2400w' + ', ' + mediumhero + ' ' + '1200w' + ', ' + smallhero + ' ' + '640w'
   
   
-  .hero-image(style='background-image: url(#{mediumhero})')
+  .hero-image(style='background-image: url(#{hero})')
   //img(src= mediumhero srcset= heroSrc)
   .project.wrapper
     .project-container

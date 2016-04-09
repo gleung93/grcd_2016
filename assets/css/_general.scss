@@ -1,3 +1,10 @@
+$dark-gray: #323132;
+$light-gray: lighten($dark-gray, 45%);
+$lightest-gray: lighten($dark-gray, 75%);
+$interaction: #57C1A5;
+$motion: #D83A91;
+$graphic: #EFBC1B;
+
 #thumbnails img {
 	width: 200px;
 	height: auto;
@@ -9,8 +16,12 @@
 
 body {
 	font-family: helvetica, arial, sans-serif;
+	color: $dark-gray;
 }
-
+a{
+	text-decoration: none;
+	color:$dark-gray;
+}
 .item {
 	position: relative;
 }

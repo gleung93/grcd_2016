@@ -4,7 +4,6 @@
 }
 .hero-image{
     width: 100%;
-    max-width: 1500px;
     margin: 0 auto;
     height: 400px;
     margin-top: 80px;
@@ -117,39 +116,31 @@
 .project ul{
   list-style: none;
   padding: 0;
+  :last-child{
+    img{
+      margin-bottom: 0;
+    }
+    
+  }
 }
 
-.project img{
-  width:100%;
-  margin-bottom: 3em;
+.project_image_list img {
+  width: 100%;
 }
-
 
 /*MEDIA QUERIES*/
-
-@media all and (max-width: 520px){
-  .container .item.project{
-    width:100%;
-  }
-  .project.wrapper{
-    width:100%;
-    padding: .5em;
-    margin-top: 1em;
-  }
-  .info{
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .info .person-info hr{
-    display: block;
-  }
-}
 @media all and (max-width:720px){
     .info .project-info{
     width:100%;
     order: 2;
     margin-left: 0;
+
+  }
+  .project.wrapper{
+    padding:.5em;
+  }
+  .container .item.project{
+    width:48%;
 
   }
   .info .person-info{
@@ -172,3 +163,22 @@
     width: 32%;
   }
 }
+@media all and (max-width: 520px){
+  .container .item.project{
+    width:100%;
+  }
+  .project.wrapper{
+    width:100%;
+    padding: .5em;
+    margin-top: 1em;
+  }
+  .info{
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .info .person-info hr{
+    display: block;
+  }
+}
+

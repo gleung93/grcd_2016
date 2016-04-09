@@ -31,10 +31,12 @@ block content
               img(src= asset(projectImages))
               
   .wrapper
+    hr
+    h2= "See more"
     #Container.container
       - for post in contentful.posts
         - var lastName = post.studentName.split(" ")[1];
-        a.item.mix(href= post._url, class= post.focus, data-name= lastName)
+        a.item.mix.project(href= post._url, class= post.focus, data-name= lastName)
           .card-wrapper
             .image
               img#img(src= asset(post.portrait))

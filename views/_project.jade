@@ -18,7 +18,10 @@ block content
     .info
       .person-info(class= entry.focus)
         .portrait
-          img(src= asset(entry.portrait))
+          if entry.portrait
+            img(src= asset(entry.portrait))
+          else
+            img(src= "img/noPortrait.jpg")
         h3= entry.studentName
         h4= entry.focus
         p= entry.skills
@@ -35,29 +38,4 @@ block content
         - for projectImages in entry.projectImages
           li
             img(src= asset(projectImages))
-              
-  .wrapper
-    hr
-    h2= "See more"
-    #Container.container
-      - for post in contentful.posts
-        - var lastName = post.studentName.split(" ")[1];
-        a.item.mix.project(href= post._url, class= post.focus, data-name= lastName)
-          .card-wrapper
-            .image
-              img#img(src= asset(post.portrait))
-            .card-content
-              span.project= post.titleOfCapstone
-              span.name= post.studentName
-      
-      //ul
-        //- for listVideo in entry.listVideo
-          //li= listVideo
-  
-  //ul.thumbnails
-    //- for post in contentful.posts
-      //li
-        //a(href= post._url) 
-          //img(src= asset(post.heroImage))
-          
   

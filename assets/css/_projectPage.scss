@@ -1,9 +1,5 @@
 /*Project Page*/
 
-//For bottom Nav
-.container .item.project{
-  width:24%;
-}
 
 //Start PRoject
 .hero-image{
@@ -188,12 +184,6 @@ ul.project_image_list li{
 
 
 /*MEDIA QUERIES*/
-@media all and (min-width: 1200px){
-  .container .item,
-  .container .gap{
-    width: 32%;
-  }
-}
 
 @media all and (max-width:720px){
     .info .project-info{
@@ -230,10 +220,6 @@ ul.project_image_list li{
     margin-right: 0.5em;
   }
 
-  .container .item,
-  .container .gap{
-    width: 32%;
-  }
 }
 
 @media all and (max-width: 520px){

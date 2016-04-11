@@ -7,7 +7,6 @@ block content
   -var largehero = asset(entry.heroImage, {w: 2400, q: 100})
   -var heroSrc = largehero + ' ' + '2400w' + ', ' + mediumhero + ' ' + '1200w' + ', ' + smallhero + ' ' + '640w'
   
-  -var portfolioLink = "http://"+entry.portfolioWebsiteLink
   -var videoLink = "//player.vimeo.com/video/"+entry.EmbedVideo
   
   
@@ -22,7 +21,18 @@ block content
         h3= entry.studentName
         h4= entry.focus
         p= entry.skills
-        a(href= portfolioLink, target="_blank")= entry.portfolioWebsiteLink
+        if entry.pair
+          - var firstStudent = entry.portfolioWebsiteLink.split(" ")[0];
+          - var secondStudent = entry.portfolioWebsiteLink.split(" ")[1];
+          - var firstLink = "http://"+firstStudent
+          - var secondLink = "http://"+secondStudent
+          a(class="pairLink" href= firstLink, target="_blank")= firstStudent
+          br
+          a(class="pairLink" href= secondLink, target="_blank")= secondStudent
+          
+        else
+          -var portfolioLink = "http://"+entry.portfolioWebsiteLink
+          a(href= portfolioLink, target="_blank")= entry.portfolioWebsiteLink
       .project-info    
         h1= entry.titleOfCapstone
         h2= entry.subtitle

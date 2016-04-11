@@ -1,13 +1,20 @@
+/*Mixitup requires this */
 #Container .mix{
   display: none;
 }
-
+/*Filtered Items Container */
+.wrapper{
+  min-height: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em;
+  padding-top: 1em;
+}
 .container{
   max-width: 1200px;
   margin: 0 auto;
   padding: 2% 0 0;
   text-align: justify;
-  /*font-size: 0;*/
 }
 .container:after{
   content: '';
@@ -31,17 +38,10 @@
 }
 
 
-.wrapper{
-  min-height: 1200px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2em;
-  padding-top: 1em;
-}
-
+/* Class Intro Section */
 .intro-wrapper{
   width:100%;
-  height:400px;
+  height:480px;
   overflow: hidden;
   margin-top: 80px;
   position: relative;
@@ -51,13 +51,20 @@
   position: absolute;
   top:0;
   left:0;
-  width:100%;
+  width:101%;
   mix-blend-mode: multiply;
   transition: all .4s ease;
 }
+/* Default state for track background imgs */
+.hidden{
+  opacity: 0;
+  -webkit-transform: rotate(20deg) scale(1.2);
+  transform: scale(1.2);
+}
+
 .intro-wrapper .text{
   position: absolute;
-  top:100px;
+  top:50px;
   left:0;
   width:100%;
   z-index: 2;
@@ -66,98 +73,93 @@
 .text-card{
   background-color: white;
   padding: 2em;
-  width:50%;
-  max-width: 800px;
+  width:70%;
+  max-width: 1000px;
   min-width: 500px;
-  height:200px;
+  height:380px;
   margin: 0 auto;
   box-shadow: 0px 2px 25px 0px rgba(0,0,0,0.05);
+  border: 10px solid $lightest-gray;
 }
 .text-card h1{
   margin-top: 0;
+  text-align: left;
+}
+.text-card h4{
+  margin-bottom: 0;
+  text-align: left;
 }
 hr {
   opacity: .5;
   margin-bottom: 1em;
 }
+/* Filters for tracks */
 .filter-home{
-  background-color: none;
-  /*border: 1px solid rgb(230,230,230);*/
+  height:200px;
   color:$light-gray;
-  width: 23%;
+  width: calc(96%/4);
   margin-right: 1%;
   display: inline-block;
   cursor: pointer;
-  // text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 1.5em;
   font-size: 1.25em;
   background-repeat: no-repeat;
-  background-size: 15%;
-  background-position: left center;
+  background-size: 55%;
+  background-position: center center;
   transition: all .2s ease-in;
+  span{
+    position: relative;
+    top: 90%;
+  }
 }
-
-.hidden{
-  opacity: 0;
-  -webkit-transform: rotate(20deg) scale(1.2);
-  transform: scale(1.2);
+/* Individual Filter Styles */
+.filter-home.all {
+  background-image: url("../img/everyone_inactive.svg");
+  background-size: 75%;
 }
-.filter.graphic:hover,
-.filter-home.graphic:hover{
-  color:#EFBD00;
-}
-.filter.graphic,
 .filter-home.graphic{
-  background-image: url("/Users/ryanhansz/Sites/GRCD_FullWeb/images/Icons/printBW.png");
+  background-image: url("../img/print_inactive.svg");
+  background-size: 45%;
 }
-.filter.graphic.active,
-.filter-home.graphic.active{
-  color:#EFBD00;
-  background-image: url("/Users/ryanhansz/Sites/GRCD_FullWeb/images/Icons/printColor.png");
-}
-.filter.motion,
 .filter-home.motion{
-  background-image: url("/Users/ryanhansz/Sites/GRCD_FullWeb/images/Icons/motionBW.png");
+  background-image: url("../img/motion_inactive.svg");
+  background-position: 60% center;
 }
-.filter.motion:hover,
+.filter-home.interaction{
+  background-image: url("../img/interaction_inactive.svg");
+}
+/* Hover States*/
+.filter-home.graphic:hover{
+  color:#EFBD00; 
+}
 .filter-home.motion:hover{
   color:#D83A91;
 }
-.filter.motion.active,
-.filter-home.motion.active{
-  color:#D83A91;
-  background-image: url("/Users/ryanhansz/Sites/GRCD_FullWeb/images/Icons/motionColor.png");
-}
-.filter.interaction,
-.filter-home.interaction{
-  background-image: url("/Users/ryanhansz/Sites/GRCD_FullWeb/images/Icons/interactionBW.png");
-}
-.filter.interaction.active,
-.filter-home.interaction.active{
-  background-image: url("/Users/ryanhansz/Sites/GRCD_FullWeb/images/Icons/interactionColor.png");
-  color:#57C1A5;
-}
-.filter.interaction:hover,
 .filter-home.interaction:hover{
-  color:#57C1A5;
+  color:$interaction; 
 }
-.filter.all.active,
+/*Active States*/
+.filter-home.graphic.active{
+  color:$graphic;
+  background-image: url("../img/print.svg");
+}
+.filter-home.motion.active{
+  color:$motion;
+  background-image: url("../img/motion.svg");
+}
+.filter-home.interaction.active{
+  background-image: url("../img/interaction.svg");
+  color:$interaction;
+}
 .filter-home.all.active{
-  color:#323123;
+  color:#492d5d;
+  background-image: url("../img/everyone.svg");
 }
 
 
-a.item.Graphic:hover .name {
-  color:#EFBC1B;
-}
-a.item.Interaction:hover .name {
-  color:#57C1A5;
-}
-a.item.Motion:hover .name {
-  color:#D83A91;
-}
 
+/* Person Card Styles */
 .card-wrapper{
   transition: all .2s ease-in;
   border: 1px solid $lightest-gray;
@@ -175,7 +177,6 @@ a.item.Motion:hover .name {
 }
 .container .item .image img{
   width: 100%;
-  // transition: all .8s linear;
 }
 .card-content{
   width:100%;
@@ -193,6 +194,16 @@ a.item.Motion:hover .name {
   color:#323132;
   padding-bottom: .5em;
   margin-top: 0;
+}
+/*Person Card Hover*/
+a.item.Graphic:hover .name {
+  color:#EFBC1B;
+}
+a.item.Interaction:hover .name {
+  color:#57C1A5;
+}
+a.item.Motion:hover .name {
+  color:#D83A91;
 }
 .card-content .project{
   text-transform: uppercase;
@@ -250,11 +261,27 @@ a.item.Motion:hover .name {
   .container .item .image{
     display: none;
   }
-  .filter{
+  .filter-home{
     width: 100%;
+    background-image: none;
     margin: 0;
     height: 2.5em;
-    padding: 0.5em;
+    padding-top: 1.75em;
+    span{
+      top: 0;
+
+    }
+
+    &.graphic,
+    &.motion,
+    &.all,
+    &.interaction,
+    &.all.active,
+    &.graphic.active,
+    &.motion.active,
+    &.interaction.active{
+      background-image: none;
+    }
   }
 
 }

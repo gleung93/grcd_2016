@@ -16,9 +16,9 @@ define(["jquery", "mixitup"], function($) {
 
       $('#Container').mixItUp({
       	animation: {
-        duration: 300,
-        effects: 'fade stagger(120ms) translateX(14%)',
-        easing: 'ease',
+        duration: 400,
+        effects: 'fade stagger(100ms) translateX(10px)',
+        easing: 'ease-in',
         },
         load: {
           sort: 'name:asc'

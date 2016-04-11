@@ -7,6 +7,7 @@
     height: 400px;
     margin-top: 80px;
     background-size: cover;
+    background-color: $lightest-gray;
     background-position: center center;
 }
 .project.wrapper{
@@ -163,6 +164,7 @@ ul.project_image_list li{
 
 .project_image_list img {
   width: 100%;
+  background-color: $lightest-gray;
 }
 
 //for Video Embed

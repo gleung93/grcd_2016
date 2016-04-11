@@ -1,6 +1,13 @@
 define(["jquery", "mixitup"], function($) {
 
   $( document ).ready(function() {
+    //Firefox multiply fallback
+    var FF = !(window.mozInnerScreenX == null);
+    if(FF) {
+        $(".intro-wrapper img").css("mix-blend-mode", "initial");
+    }
+
+    //Mix it Up
     var filterState;
     var graphicState = true;
     var motionState = true;

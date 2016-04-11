@@ -11,6 +11,7 @@ header{
 	/*margin: 0 auto;*/
 	width:200px;
 	cursor:pointer;
+	float: left;
 }
 #img_wrap #static, #img_wrap:hover #animated {
   display: inline;
@@ -18,4 +19,10 @@ header{
 }
 #img_wrap #animated, #img_wrap:hover #static {
   display: none;
+}
+
+.navList {
+	float: right;
+	list-style: none;
+	text-transform: uppercase;
 }

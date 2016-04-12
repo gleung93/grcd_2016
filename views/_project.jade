@@ -8,18 +8,22 @@ block content
   -var heroSrc = largehero + ' ' + '2400w' + ', ' + mediumhero + ' ' + '1200w' + ', ' + smallhero + ' ' + '640w'
   
   -var videoLink = "//player.vimeo.com/video/"+entry.EmbedVideo
-  
+
+  if( entry.studentName.indexOf('Thorsen') >= 0)
+    -var studentFocus = "Motion Interaction"
+  else
+    -var studentFocus = entry.focus
   
   
   .hero-image(style='background-image: url(#{hero})')
   //img(src= mediumhero srcset= heroSrc)
   .project.wrapper
     .info
-      .person-info(class= entry.focus)
+      .person-info(class= studentFocus)
         .portrait
           img(src= asset(entry.portrait))
         h3= entry.studentName
-        h4= entry.focus
+        h4= studentFocus
         p= entry.skills
         if entry.pair
           - var firstStudent = entry.portfolioWebsiteLink.split(" ")[0];

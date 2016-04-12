@@ -7,6 +7,13 @@ define(["jquery", "mixitup"], function($) {
         $(".intro-wrapper img").css("mix-blend-mode", "initial");
     }
 
+    //Hide Current profile link
+    $("[href]").each(function() {
+    if (this.href == window.location.href) {
+        $(this).addClass("activeProject");
+        }
+    });
+
     //Mix it Up
     var filterState;
     var graphicState = true;

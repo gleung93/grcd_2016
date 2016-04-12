@@ -124,6 +124,10 @@
   background-image: url("../img/interaction.svg");
 }
 
+.info .person-info.Motion.Interaction .portrait:before{
+  background-image: url("../img/Motion_interaction.svg");
+}
+
 //Start Project
 .info .project-info{
   width: 64%;
@@ -169,6 +173,10 @@ ul.project_image_list li{
 .project_image_list img {
   width: 100%;
   background-color: $lightest-gray;
+}
+
+.activeProject {
+  display: none !important;
 }
 
 //for Video Embed

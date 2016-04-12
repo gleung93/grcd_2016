@@ -1,33 +1,8 @@
 extends layout
 
 block content
-  .intro-wrapper
-    .text
-      .text-card
-        h1 Meet the Class of 2016
-        h4 72 students, all with a story to tell.
-        hr
-        .center
-          .filter-home.all.active(data-filter='all') Everyone
-          .filter-home.graphic(data-filter='.Graphic') Graphic
-          .filter-home.motion(data-filter='.Motion') Motion
-          .filter-home.interaction(data-filter='.Interaction') Interaction
-    img.graphic-image(src= 'img/graphic_pattern.png')
-    img.motion-image(src= 'img/motion_pattern.png')
-    img.interaction-image(src= 'img/interaction_pattern.png')
-  
-  .wrapper
-    #Container.container
-      - for post in contentful.posts
-        - var lastName = post.studentName.split(" ")[1];
-        if( post.studentName.indexOf('Thorsen') >= 0)
-          -var studentFocus = "Motion Interaction"
-        else
-          -var studentFocus = post.focus
-        a.item.mix(href= post._url, class= studentFocus, data-name= lastName)
-          .card-wrapper
-            .image
-              img#img(src= asset(post.portrait))
-            .card-content
-              span.project= post.titleOfCapstone
-              span.name= post.studentName
+  .404container
+    .message404
+      img(src="img/pizza.svg")
+      h1 404
+      h2 PAGE NOT FOUND

@@ -20,7 +20,11 @@ block content
     #Container.container
       - for post in contentful.posts
         - var lastName = post.studentName.split(" ")[1];
-        a.item.mix(href= post._url, class= post.focus, data-name= lastName)
+        if( post.studentName.indexOf('Thorsen') >= 0)
+          -var studentFocus = "Motion Interaction"
+        else
+          -var studentFocus = post.focus
+        a.item.mix(href= post._url, class= studentFocus, data-name= lastName)
           .card-wrapper
             .image
               img#img(src= asset(post.portrait))

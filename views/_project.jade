@@ -2,7 +2,11 @@ extends layout
 
 block content
   -var videoLink = "//player.vimeo.com/video/"+entry.EmbedVideo
-  -var hero = asset(entry.heroImage)
+  -var hero = asset(entry.heroImage, {q: 70})
+  -var smallHero = asset(entry.heroImage, {w: 640, q: 100})
+  -var mediumHero = asset(entry.heroImage, {w: 1200, q: 100})
+  -var largeHero = asset(entry.heroImage)
+  -var heroSrc = largeProject + ' ' + '2400w' + ', ' + mediumProject + ' ' + '1200w' + ', ' + smallProject + ' ' + '640w'
 
   if( entry.studentName.indexOf('Thorsen') >= 0)
     -var studentFocus = "Motion Interaction"

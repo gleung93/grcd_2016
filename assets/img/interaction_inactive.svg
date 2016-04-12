@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 143.9 98.6" style="enable-background:new 0 0 143.9 98.6;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+	.st1{fill:#FFFFFF;stroke:#A5A3A5;stroke-width:3;stroke-miterlimit:10;}
+	.st2{fill:#A5A3A5;}
+	.st3{fill:none;stroke:#A5A3A5;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	.st4{fill:#A5A3A5;stroke:#A5A3A5;stroke-width:3;stroke-miterlimit:10;}
+	.st5{fill:none;stroke:#A5A3A5;stroke-width:3;stroke-miterlimit:10;}
+</style>
+<rect x="0.3" y="12.3" class="st0" width="136" height="6.3"/>
+<g id="interaction">
+	<g>
+		<rect x="1.7" y="19.8" class="st1" width="133.7" height="77.3"/>
+		<rect x="0.3" class="st2" width="136.5" height="12.3"/>
+		<circle class="st2" cx="0.3" cy="6.2" r="3.7"/>
+		<circle class="st2" cx="9.7" cy="6.2" r="3.7"/>
+		<circle class="st2" cx="19.3" cy="6.2" r="3.7"/>
+		<line class="st3" x1="-5.5" y1="42.2" x2="57.8" y2="42.2"/>
+		<line class="st3" x1="-5.5" y1="49.8" x2="57.8" y2="49.8"/>
+		<line class="st3" x1="-5.5" y1="57.4" x2="57.8" y2="57.4"/>
+		<line class="st3" x1="-5.5" y1="65" x2="57.8" y2="65"/>
+		<circle class="st4" cx="96.1" cy="70.1" r="14"/>
+		<polygon class="st5" points="112,42.2 128,69.8 96.1,69.8 		"/>
+	</g>
+</g>
+<g id="Layer_1_1_">
+</g>
+</svg>

@@ -49,12 +49,12 @@ block content
           iframe(src=videoLink, frameborder="0", webkitallowfullscreen, mozallowfullscreen, allowfullscreen)
       ul.project_image_list
         - for projectImages in entry.projectImages
-          -var project = asset(entry.heroImage)
-          -var smallProject = asset(entry.heroImage, {w: 640, q: 100})
-          -var mediumProject = asset(entry.heroImage, {w: 1200, q: 100})
-          -var largeProject = asset(entry.heroImage)
+          -var project = asset(entry.projectImages)
+          -var smallProject = asset(entry.projectImages, {w: 640, q: 100})
+          -var mediumProject = asset(entry.projectImages, {w: 1200, q: 100})
+          -var largeProject = asset(entry.projectImages)
           -var projectSrc = largeProject + ' ' + '2400w' + ', ' + mediumProject + ' ' + '1200w' + ', ' + smallProject + ' ' + '640w'
           li
-            img(src= asset(projectImages), srcset= projectSrc)
+            img(src= asset(projectImages))
           
   

@@ -2,8 +2,13 @@ extends layout
 
 block content
   .intro-wrapper
+    //
+      .DragBoundary
+        +icons("print", "17")
+        +icons("motion", "17")
+        +icons("interaction", "17")
     .text
-      .text-card
+      .text-card.drag
         h1 Meet the Class of 2016
         h4 72 students, all with a story to tell.
         hr
@@ -27,7 +32,16 @@ block content
         a.item.mix(href= post._url, class= studentFocus, data-name= lastName)
           .card-wrapper
             .image
-              img#img(src= asset(post.portrait))
+              if post.portrait
+                  img#img(src= asset(post.portrait))
+                else
+                  img(src= "img/noPortrait.jpg")
             .card-content
               span.project= post.titleOfCapstone
               span.name= post.studentName
+
+mixin icons(focus, total)
+  -var i = 0
+  while i < total
+    -var link = "img/"+ focus + "Icons/" + focus + i++ +".svg"
+    img.drag(class=focus, src=link)

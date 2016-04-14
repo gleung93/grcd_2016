@@ -13,6 +13,16 @@
   text-align: justify;
   /*font-size: 0;*/
 }
+
+.wrapper{
+  min-height: 1200px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em;
+  padding-top: 1em;
+}
+
+
 .container:after{
   content: '';
   display: inline-block;
@@ -22,8 +32,11 @@
 .container .item,
 .container .gap{
   display: inline-block;
-  width: 49%;
+  width: 48%;
   cursor: pointer;
+  @media (min-width: 800px) {
+      width:24%;
+  }
 }
 
 .container .item{
@@ -32,15 +45,6 @@
   margin-bottom: 2%;
   cursor: pointer;
   /*display: none; <-- uncomment this rule for use with MixItUp */
-}
-
-
-.wrapper{
-  min-height: 1200px;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 2em;
-  padding-top: 1em;
 }
 
 .intro-wrapper{
@@ -55,7 +59,7 @@
   position: absolute;
   top:0;
   left:0;
-  width:100%;
+  width:101%;
   mix-blend-mode: multiply;
   transition: all .4s ease;
 }
@@ -69,15 +73,23 @@
 }
 .text-card{
   background-color: white;
-  padding: 2em;
-  width:50%;
-  max-width: 800px;
+  padding: 3em;
+  width: 50%;
+  max-width: 850px;
   min-width: 500px;
-  height:200px;
+  height: 240px;
+  border: 10px solid rgb(250,250,250);
   margin: 0 auto;
   box-shadow: 0px 2px 25px 0px rgba(0,0,0,0.05);
+  .center{
+    margin-top: 1.5em;
+  }
 }
 .text-card h1{
+  margin-top: 0;
+  margin-bottom: .25em;
+}
+h4{
   margin-top: 0;
 }
 hr {
@@ -107,50 +119,28 @@ hr {
   -webkit-transform: rotate(20deg) scale(1.2);
   transform: scale(1.2);
 }
-.filter.graphic:hover,
 .filter-home.graphic:hover{
   color:#EFBD00;
 }
-.filter.graphic,
-.filter-home.graphic{
-  background-image: url("/Users/ryanhansz/Sites/GRCD_FullWeb/images/Icons/printBW.png");
-}
-.filter.graphic.active,
-.filter-home.graphic.active{
+.filter-home.graphic.active,
+{
   color:#EFBD00;
-  background-image: url("/Users/ryanhansz/Sites/GRCD_FullWeb/images/Icons/printColor.png");
 }
-.filter.motion,
-.filter-home.motion{
-  background-image: url("/Users/ryanhansz/Sites/GRCD_FullWeb/images/Icons/motionBW.png");
-}
-.filter.motion:hover,
 .filter-home.motion:hover{
   color:#D83A91;
 }
-.filter.motion.active,
 .filter-home.motion.active{
   color:#D83A91;
-  background-image: url("/Users/ryanhansz/Sites/GRCD_FullWeb/images/Icons/motionColor.png");
 }
-.filter.interaction,
-.filter-home.interaction{
-  background-image: url("/Users/ryanhansz/Sites/GRCD_FullWeb/images/Icons/interactionBW.png");
-}
-.filter.interaction.active,
 .filter-home.interaction.active{
-  background-image: url("/Users/ryanhansz/Sites/GRCD_FullWeb/images/Icons/interactionColor.png");
   color:#57C1A5;
 }
-.filter.interaction:hover,
 .filter-home.interaction:hover{
   color:#57C1A5;
 }
-.filter.all.active,
 .filter-home.all.active{
   color:#323123;
 }
-
 
 a.item.Graphic:hover .name {
   color:#EFBC1B;
@@ -168,22 +158,21 @@ a.item.Motion:hover .name {
 }
 .card-wrapper:hover{
   box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.13);
-}
-.card-wrapper:hover img{
-  opacity:.9;
+  @include transform(scale(1.05));
+
 }
 .container .item .image{
   width:100%;
   overflow: hidden;
-
 }
 .container .item .image img{
-  width: 100%;
-  // transition: all .8s linear;
+  width: 90%;
+  margin-left: 5%;
+  @include transition(all .3s ease-in-out);
 }
 .card-content{
   width:100%;
-  height:70px;
+  height:80px;
   font-size: .75em;
   overflow: hidden;
   padding-top: 1em;
@@ -262,12 +251,7 @@ a.item.Motion:hover .name {
   }
 
 }
-@media all and (min-width: 720px){
-  .container .item,
-  .container .gap{
-    width: 32%;
-  }
-}
+
 
 @media all and (min-width: 1200px){
 

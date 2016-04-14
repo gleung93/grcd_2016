@@ -1,6 +1,44 @@
 extends layout
 
 block content
+  .intro-container
+    .shapes-wrapper
+      +icons("interaction","7")
+      .drag.floating-items#i1
+        img(src="img/icons/interaction1.svg")
+      .drag.floating-items#i2
+        img(src="img/icons/interaction2.svg")
+      .drag.floating-items#i3
+        img(src="img/icons/interaction3.svg")
+      .drag.floating-items#i4
+        img(src="img/icons/interaction4.svg")
+    .logo-wrapper
+      .logo-container
+        .logo
+          img(src="img/logo.svg")
+          img.shapes.drag#s2(src="img/icons/2.svg")
+          img.shapes.drag#s3(src="img/icons/3.svg")
+          img.shapes.drag#s4(src="img/icons/4.svg")
+          img.shapes.drag#s5(src="img/icons/5.svg")
+          img.shapes.drag#s6(src="img/icons/6.svg")
+          img.shapes.drag#s7(src="img/icons/7.svg")
+          img.tagline(src="img/daapworks.svg")
+
+  .text-container
+        .col
+          p.section-header University of Cincinnati 
+          p.emphasized Graphic Communication Design Exhibition
+          br
+          p Free Admission and Refreshments
+        .col
+          p.section-header Exhibition Hours
+          p.emphasized Opening Reception April 26th, 5PM - 6PM
+          p April 26th, 5PM - 9PM </br> April 27-29, 9AM - 9PM </br> April 30, 10AM - 1PM
+          
+        .col
+          p.section-header Location
+          p.emphasized DAAP Aronoff Building </br> 2624 Clifton Avenue </br> Cincinnati, OH 45219
+
   .intro-wrapper
     //
       .DragBoundary
@@ -10,7 +48,7 @@ block content
     .text
       .text-card.drag
         h1 Meet the Class of 2016
-        h4 72 students, all with a story to tell.
+        h4 73 students, all with a story to tell.
         hr
         .center
           .filter-home.all.active(data-filter='all') Everyone
@@ -39,6 +77,10 @@ block content
             .card-content
               span.project= post.titleOfCapstone
               span.name= post.studentName
+      .gap
+      .gap
+      .gap
+
 
 mixin icons(focus, total)
   -var i = 1

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 67.269 67.269" style="enable-background:new 0 0 67.269 67.269;" xml:space="preserve">
+<g id="motion1">
+	<g>
+		<defs>
+			
+				<ellipse id="SVGID_1_" transform="matrix(0.7071 -0.7071 0.7071 0.7071 -13.6789 33.3049)" cx="33.363" cy="33.164" rx="21.503" ry="21.503"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g style="clip-path:url(#SVGID_2_);">
+			
+				<line style="fill:none;stroke:#D83C92;stroke-width:6.1737;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="58.061" y1="39.696" x2="27.574" y2="9.209"/>
+			
+				<line style="fill:none;stroke:#D83C92;stroke-width:6.1737;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="51.939" y1="45.817" x2="21.452" y2="15.33"/>
+			
+				<line style="fill:none;stroke:#D83C92;stroke-width:6.1737;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="64.183" y1="33.574" x2="33.696" y2="3.087"/>
+			
+				<line style="fill:none;stroke:#D83C92;stroke-width:6.1737;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="45.817" y1="51.939" x2="15.33" y2="21.452"/>
+			
+				<line style="fill:none;stroke:#D83C92;stroke-width:6.1737;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="39.696" y1="58.061" x2="9.209" y2="27.574"/>
+			
+				<line style="fill:none;stroke:#D83C92;stroke-width:6.1737;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;" x1="33.574" y1="64.183" x2="3.087" y2="33.696"/>
+		</g>
+	</g>
+</g>
+<g id="Layer_1">
+</g>
+</svg>

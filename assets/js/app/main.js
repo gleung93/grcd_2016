@@ -7,7 +7,7 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
     $('.menu').click(function() {
         $('header').toggleClass('active');
     });
-    $('.popup-vimeo').click(function() {
+    $('.popup-vimeo, .projectsAnchor').click(function() {
         $('header').removeClass('active');
         console.log("smallLink");
     });
@@ -22,7 +22,7 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
     Draggable.create(".drag", {
       throwProps: true,
       throwResistance: "2000",
-      bounds: $(".intro-container"),
+      bounds: $("#boundary"),
     });
 
     //Lightbox
@@ -38,6 +38,24 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
         }
     });
 
+
+    //Change navbar on scroll
+    var mainbottom = $('.intro-container').offset().top + $('.intro-container').height();
+
+    // on scroll,
+    $(window).on('scroll',function(){
+
+        // we round here to reduce a little workload
+        var stop = Math.round($(window).scrollTop());
+
+        if (stop > mainbottom) {
+            $('header').removeClass('landingStyle');
+        } else {
+            $('header').addClass('landingStyle');
+        }
+
+    });
+
     /*Smooth Scroll to Projects*/
     $('a[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -45,8 +63,8 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           $('html, body').animate({
-            scrollTop: target.offset().top -75
-          }, 1000, 'swing');
+            scrollTop: target.offset().top -66
+          }, 750, 'swing');
           return false;
         }
       }

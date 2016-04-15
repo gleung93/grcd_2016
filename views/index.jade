@@ -1,37 +1,57 @@
 extends layout
 
-block content
-  .intro-container
-    .shapes-wrapper
-      +icons("interaction","18")
-      +icons("motion","17")
-      +icons("print","17")
-    .logo-wrapper
-      .logo-container
-        .logo
-          img(src="img/logo.svg")
-          img.shapes.drag#s2(src="img/icons/2.svg")
-          img.shapes.drag#s3(src="img/icons/3.svg")
-          img.shapes.drag#s4(src="img/icons/4.svg")
-          img.shapes.drag#s5(src="img/icons/5.svg")
-          img.shapes.drag#s6(src="img/icons/6.svg")
-          img.shapes.drag#s7(src="img/icons/7.svg")
-          img.tagline(src="img/daapworks.svg")
+block headerStyle
+  header.landingStyle
+    #img_wrap.static
+      a(href="index.html")
+        img#animated(src="img/logoanimated.gif")
+        img#static(src="img/logo.png")
+    .navList
+      .menu
+        span.icon-bar.top-bar
+        span.icon-bar.middle-bar
+        span.icon-bar.bottom-bar
+      ul
+        li
+          a(href="news.html") News
+        li
+          a.popup-vimeo(href="https://vimeo.com/162584962") Video
+        li.projectsAnchor
+          a(href="index.html#projects") Projects
 
-  .text-container
-    .text-wrapper
-      .col
-        p.emphasized Design Exhibition at the University of Cincinnati
-        h1 Come meet the 73 designers of DAAP GRCD class of 2016.
-      .col.small
-        p.emphasized Opening Reception
-        p April 26, 5PM - 6PM
-        p.emphasized Exhibition Hours
-        p April 26, 5PM - 9PM </br> April 27-29, 9AM - 9PM </br> April 30, 10AM - 1PM   
-      .col.small
-        a(target = "blank" href="http://maps.google.com/?q=DAAP Aronoff Building 2624 Clifton Avenue Cincinnati, OH 45219")
-          p.emphasized DAAP Aronoff Building 
-          p 2624 Clifton Avenue </br> Cincinnati, OH 45219
+block content
+  #boundary
+    .intro-container
+      .shapes-wrapper
+        +icons("interaction","18")
+        +icons("motion","17")
+        +icons("print","17")
+      .logo-wrapper
+        .logo-container
+          .logo
+            img(src="img/logo.svg")
+            img.shapes.drag#s2(src="img/icons/2.svg")
+            img.shapes.drag#s3(src="img/icons/3.svg")
+            img.shapes.drag#s4(src="img/icons/4.svg")
+            img.shapes.drag#s5(src="img/icons/5.svg")
+            img.shapes.drag#s6(src="img/icons/6.svg")
+            img.shapes.drag#s7(src="img/icons/7.svg")
+            img.tagline(src="img/daapworks.svg")
+
+    .text-container
+      .text-wrapper
+        .col
+          p.emphasized Design Exhibition at the University of Cincinnati
+          h1 Come meet the 73 designers of DAAP GRCD class of 2016.
+        .col.small
+          p.emphasized Opening Reception
+          p April 26, 5PM - 6PM
+          p.emphasized Exhibition Hours
+          p April 26, 5PM - 9PM </br> April 27-29, 9AM - 9PM </br> April 30, 10AM - 1PM   
+        .col.small
+          a(target = "blank" href="http://maps.google.com/?q=DAAP Aronoff Building 2624 Clifton Avenue Cincinnati, OH 45219")
+            p.emphasized DAAP Aronoff Building 
+            p 2624 Clifton Avenue </br> Cincinnati, OH 45219
 
   #projects.intro-wrapper
     .text

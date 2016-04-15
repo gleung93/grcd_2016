@@ -11,6 +11,11 @@
 		left: 0;
 	}
 }
+
+#boundary{
+	//margin-top: 0;
+}
+
 .floating-items{
 	position: absolute;
 	img{
@@ -36,7 +41,7 @@
 }
 .logo-wrapper{
 	max-width:1200px;
-	margin: 2em auto;
+	margin: 0 auto;
 	height:100%;
 }
 .shapes-wrapper{

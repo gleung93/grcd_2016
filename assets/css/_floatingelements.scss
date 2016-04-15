@@ -258,3 +258,106 @@
     left: 77%;
     width: 2%;
 }
+@media (max-width:500px){
+	#interaction1{
+		display: none;
+	}
+	#interaction2{
+		top: 100%;
+    	left: 85%;
+    	width: 15%;
+	}
+	#interaction3{
+		display: none;
+	}
+	#interaction5{
+		display: none;
+	}
+	#print1{
+		display: none;
+	}
+	#print7{
+		width: 9%;
+		top: 108%;
+		left: 21%;
+	}
+	#print8{
+		width: 6%;
+		top: 105%;
+		left: 19%;
+	}
+	#print2{
+		top: 97%;
+		left: 81.2%;
+		width: 10%;
+	}
+	#interaction10{
+		top: 81%;
+		left: 5%;
+		width: 14%;
+	}
+	#interaction15{
+		display: none;
+	}
+	#motion17{
+		top: 34%;
+		left: 71%;
+		width: 11%;
+	}
+	
+	#print15{
+		top: 82%;
+		left: 47%;
+		width: 18%;
+	}
+	#print4{
+		top: 39%;
+		left: 2%;
+		width: 8%;
+	}
+	#print14{
+		top: 22%;
+    	left: 14.3%;
+    	width: 18%;
+	}
+	#interaction12{
+		top: 19%;
+		left: 15.9%;
+		width: 22%;
+	}
+	//Pizza dots
+	#motion9{
+		top: 22.5%;
+		left: 15.5%;
+		width: 12%;
+	}
+	#interaction17{
+		display: none;
+	}
+	#print17{
+		display: none;
+	}
+	#motion8{
+		display: none;
+	}
+	#print11{
+		width: 6%;
+	    top: 12%;
+    	left: 2%;
+	}
+	#motion12{
+		display: none;
+	}
+	/*Brain*/
+	#interaction8{
+		display: none;
+	}
+	/*Brain*/
+	#motion5{
+		display: none;
+	}
+	/*Brain*/
+	#print12{
+		display: none;
+	}
+}

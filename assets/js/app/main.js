@@ -124,7 +124,7 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
       $('#ContainerMore').mixItUp({
         animation: {
         duration: 300,
-        effects: 'fade stagger(120ms) translateX(14%)',
+        effects: 'fade translateX(14%)',
         easing: 'ease',
         },
         load: {

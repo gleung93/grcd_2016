@@ -82,9 +82,12 @@ block content
           .card-wrapper
             .image
               if post.portrait
-                  img#img(src= asset(post.portrait))
-                else
-                  img(src= "img/noPortrait.jpg")
+                -var fullPortrait = asset(post.portrait)
+                -var smallPortrait = asset(post.portrait, {w: 250, q: 100})
+                -var portraitSrc = fullPortrait + ' ' + '500w' + ', ' + smallPortrait + ' ' + '250w'
+                img#img(src= smallPortrait, srcset= portraitSrc)
+              else
+                img(src= "img/noPortrait.jpg")
             .card-content
               span.project= post.titleOfCapstone
               span.name= post.studentName

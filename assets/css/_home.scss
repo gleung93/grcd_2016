@@ -196,14 +196,16 @@ hr {
 .filter-home.all span:after {
   @include linear-gradient(90deg, $graphic 0%, $graphic 33%, $motion 33%, $motion 66%, $interaction 66%);
 }
-
-a.item.Graphic:hover .name {
+a.item.Graphic:hover .name,
+a.item.Graphic:active .name, {
   color:#EFBC1B;
 }
-a.item.Interaction:hover .name {
+a.item.Interaction:hover .name,
+a.item.Interaction:active .name {
   color:#57C1A5;
 }
-a.item.Motion:hover .name {
+a.item.Motion:hover .name,
+a.item.Motion:active .name {
   color:#D83A91;
 }
 
@@ -261,6 +263,17 @@ a.item.Motion:hover .name {
     height: 250px;
 
   }
+  //Stop hover on mobile-ish
+  .card-wrapper:hover {
+    @include transform(translateY(0px));
+    box-shadow: 0px 0px 0px lighten(#d8d8d8,5%);
+    border: 1px solid $lightest-gray;
+  }
+  a.item.Graphic:hover .name,
+  a.item.Motion:hover .name,
+  a.item.Interaction:hover .name, {
+    color:#323132;
+}
   .text-card{
     width:100%;
     padding:.5em;

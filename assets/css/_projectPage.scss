@@ -129,6 +129,7 @@
   background-image: url("../img/Motion_interaction.svg");
   height: 60px;
   width: 60px;
+  bottom: -20px;
 }
 
 //Start Project
@@ -248,6 +249,9 @@ ul.project_image_list li{
     width:100%;
     padding: .5em;
     margin-top: 1em;
+  }
+  .hero-image{
+      height: 300px;
   }
   .info{
     display: flex;

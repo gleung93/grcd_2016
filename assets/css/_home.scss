@@ -41,7 +41,6 @@
 
 .container .item{
   text-align: left;
-  border: 1px solid rgb(250,250,250);
   margin-bottom: 2%;
   cursor: pointer;
   /*display: none; <-- uncomment this rule for use with MixItUp */
@@ -201,12 +200,13 @@ a.item.Motion:hover .name {
 }
 
 .card-wrapper{
-  transition: all .2s ease-in;
+  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
   border: 1px solid $lightest-gray;
 }
 .card-wrapper:hover{
-  box-shadow: 0px 2px 5px 0px rgba(0,0,0,0.13);
-  @include transform(scale(1.05));
+  @include transform(translateY(-10px));
+  box-shadow: 0px 10px 15px lighten(#d8d8d8,5%);
+  border-bottom-color: rgba(216, 216, 216, 0);
 
 }
 .container .item .image{

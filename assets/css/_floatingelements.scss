@@ -1,27 +1,28 @@
 /* Interaction Shapes */
 #interaction1 {
-	top: -5%;
-    left: 80%;
-    width: 45%;
+	display: none;
+	top: 5%;
+    left: 102%;
+    width: 25%;
 }
 #interaction2 {
-	top: 80%;
-    left: 40%;
+	top: 100%;
+    left: 90%;
     width: 5%;
 }
 #interaction3 {
-	top: 72%;
-    left: 20%;
+	
+	top: 22%;
+    left: 60%;
     width: 2%;
 }
-
-// /* Pink Colored */
 #interaction4 {
 	display: none;
 }
 #interaction5{
-	top:65%;
-	left:5%;
+	
+	top:95%;
+	left:38%;
 	width:5%;
 }
 #interaction6{
@@ -31,32 +32,35 @@
 	width:5%;
 }
 #interaction7{
-	top: -12%;
-    left: 60%;
+	
+	top: 2%;
+    left: 30%;
     width: 10%;
 }
 
 #interaction9{
+	display: none;
 	top:22%;
 	left:44%;
 	width:5%;
 }
 #motion3{
-	top: 22%;
-	left: 45%;
-	width:5%;
+	top: 19%;
+	left: 37%;
+	width: 3%;
 }
 #interaction10{
 	top:55%;
-	left:85%;
+	left:5%;
 	width:5%;
 }
 #interaction17{
-	top: 28%;
-	left:10%;
-	width:5%;
+	top: 83%;
+	left: 15%;
+	width: 5%;;
 }
 #interaction14{
+	display: none;
 	top: 45%;
 	left: 5%;
 	width: 5%;
@@ -77,37 +81,45 @@
 	display: none;
 }
 #motion2 {
-	top: -12%;
-	width: 15%;
-	left: -5%;
+	display: none;
+	top: 20%;
+	width: 5%;
+	left: -3%;
 }
 
 #motion4{
-	top: 1%;
-	left: 46%;
-	width:5%;
+	top: 18%;
+	left: 21%;
+	width: 4%;
 }
 
 #motion6{
-	top: 40%;
-    left: 86%;
-    width: 5%;
+	display: none;
+	top: 45%;
+    left: 91%;
+    width: 2%;
 }
 #motion7{
+	display: none;
 	top:85%;
 	left:80%;
 	width:5%;
 }
 #motion8{
-	top:75%;
-	left: 14%;
-	width:5%;
+	top: 102%;
+	left: 4%;
+	width: 5%;
 }
 
 #motion10{
-	top:50%;
-	left:3%;
-	width:5%;
+	top:40%;
+	left:95%;
+	width:5%
+}
+#motion17{
+	top: 63%;
+    left: 90%;
+    width: 6%;
 }
 #motion11,
 #motion12,
@@ -115,40 +127,43 @@
 #motion14,
 #motion15,
 #motion16,
-#motion17{
+{
 	display: none;
 }
 
 
 #print1{
-	top:20%;
-	left:15%;
+	
+	top:99%;
+	left:40%;
 	width:3%;
 }
 #print2{
-	top: 76%;
-    left: 38.4%;
+	top: 94%;
+    left: 88.2%;
     width: 4%;
 }
 #print3{
+	display: none;
 	top:5%;
 	left:32%;
 	width:2%;
 }
 #print4{
-	top: 85%;
-	left:60%;
-	width:5%;
+	top: 42%;
+	left: 2%;
+	width: 5%;
 }
 #print5{
-	top:90%;
-	left:2%;
-	width:8%;
+	display: none;
+	top: 100%;
+    left: 0%;
+    width: 5%;
 }
 #print6{
-	top:50%;
-	left:75%;
-	width:3%;
+	top: 50%;
+    left: 83%;
+    width: 3%;
 }
 // #print6{
 // 	top:10%;
@@ -162,71 +177,78 @@
 // }
 // Overlays print 1
 #print8{
-	width:22%;
-	top:76%;
+	display: none;
+	width:6%;
+	top:88%;
 	left:88%;
 }
 #print9{
+	display: none;
 	top:30%;
 	left:96%;
 	width:5%;
 }
 #print10{
-	top:90%;
-	left:25%;
+
+	top:40%;
+	left:93%;
 	width:3%;
 }
 #print11{
-	width:20%;
-	top:80%;
-	left:90%;
+	width: 5%;
+    top: 15%;
+    left: 90%;
 }
 #print15{
-	top: 1%;
-    left: 30%;
+	top: 100%;
+    left: 70%;
     width: 10%;
+}
+#print17{
+	top: 100%;
+	left:5%;
+	width:8%;
 }
 #print7,
 #print13,
 #print16,
-#print17,
 #print18,
 #print19{
 	display: none;
 }
 // pizza
 #interaction12{
-	top:4%;
-	left:20.5%;
+	top:34%;
+	left:10.5%;
 	width:5%;
 }
 //Pizza dots
 #motion9{
-	top:5.5%;
-	left:20.5%;
+	top:35.5%;
+	left:10.5%;
 	width:3%;
 }
 // pizza
 #print14{
-	top:5%;
-	left:20.3%;
+	top:35%;
+	left:10.3%;
 	width:4%;
 }
 /*Brain*/
 #interaction8{
-	top:12%;
-	left:70%;
-	width:10%;
+	top: 20%;
+    left: 70.5%;
+    width: 7%;
 }
 /*Brain*/
 #motion5{
-	top:15%;
-	left:70%;
-	width:10%;
+	top: 23%;
+    left: 70%;
+    width: 7%;
 }
 /*Brain*/
 #print12{
-	top:8%;
-	left:78%;
-	width:3%;
+	top: 21%;
+    left: 77%;
+    width: 2%;
 }

@@ -38,23 +38,43 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
         }
     });
 
+    $(".projectsAnchor[href], .news[href]").each(function() {
+    if (this.href == window.location.href) {
+        $(this).addClass("activeLink");
+        }
+    });
+
 
     //Change navbar on scroll
-    var mainbottom = $('.intro-container').offset().top + $('.intro-container').height();
+    if ($('.intro-container').length) {
+      var mainbottom = $('.intro-container').offset().top + $('.intro-container').height()-25;
+      //On load too
+      var stop = Math.round($(window).scrollTop());
 
-    // on scroll,
-    $(window).on('scroll',function(){
+      if (stop > mainbottom) {
+          $('header').removeClass('landingStyle');
+          $('.projectsAnchor').addClass("activeLink");
+      } else {
+          $('header').addClass('landingStyle');
+          $('.projectsAnchor').removeClass("activeLink");
+      }
 
-        // we round here to reduce a little workload
-        var stop = Math.round($(window).scrollTop());
+      // on scroll,
+      $(window).on('scroll',function(){
 
-        if (stop > mainbottom) {
-            $('header').removeClass('landingStyle');
-        } else {
-            $('header').addClass('landingStyle');
-        }
+          // we round here to reduce a little workload
+          var stop = Math.round($(window).scrollTop());
 
-    });
+          if (stop > mainbottom) {
+              $('header').removeClass('landingStyle');
+              $('.projectsAnchor').addClass("activeLink");
+          } else {
+              $('header').addClass('landingStyle');
+              $('.projectsAnchor').removeClass("activeLink");
+          }
+
+      });
+    }
 
     /*Smooth Scroll to Projects*/
     $('a[href*="#"]:not([href="#"])').click(function() {
@@ -63,7 +83,7 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
         if (target.length) {
           $('html, body').animate({
-            scrollTop: target.offset().top -66
+            scrollTop: target.offset().top
           }, 750, 'swing');
           return false;
         }

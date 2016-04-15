@@ -13,11 +13,11 @@ block headerStyle
         span.icon-bar.bottom-bar
       ul
         li
-          a(href="news.html") News
+          a.news(href="news.html") News
         li
           a.popup-vimeo(href="https://vimeo.com/162584962") Video
-        li.projectsAnchor
-          a(href="index.html#projects") Projects
+        li
+          a.projectsAnchor(href="index.html#projects") Projects
 
 block content
   #boundary
@@ -29,7 +29,7 @@ block content
       .logo-wrapper
         .logo-container
           .logo
-              img.nopointer(src="img/logo.svg")
+            img.nopointer(src="img/logo.svg")
             img.shapes.drag#s2(src="img/icons/2.svg")
             img.shapes.drag#s3(src="img/icons/3.svg")
             img.shapes.drag#s4(src="img/icons/4.svg")
@@ -53,7 +53,8 @@ block content
             p.emphasized DAAP Aronoff Building 
             p 2624 Clifton Avenue </br> Cincinnati, OH 45219
 
-  #projects.intro-wrapper
+  a#projects
+  .intro-wrapper
     .text
         hr
         .center

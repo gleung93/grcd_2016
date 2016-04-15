@@ -7,7 +7,7 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
     $('.menu').click(function() {
         $('header').toggleClass('active');
     });
-    $('header.active ul').click(function() {
+    $('.popup-vimeo').click(function() {
         $('header').removeClass('active');
         console.log("smallLink");
     });

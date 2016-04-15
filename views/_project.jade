@@ -59,7 +59,7 @@ block content
               
   .wrapper
     hr
-    h2= "See more"
+    h2= "See more projects"
     #ContainerMore.container
       - for post in contentful.posts
         - var lastName = post.studentName.split(" ")[1];
@@ -73,7 +73,9 @@ block content
             .card-content
               span.project= post.titleOfCapstone
               span.name= post.studentName
-      
+      .gap
+      .gap
+      .gap
       //ul
         //- for listVideo in entry.listVideo
           //li= listVideo

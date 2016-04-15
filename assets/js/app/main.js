@@ -146,26 +146,25 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
       });
 
       $('.graphic').click(function() {
-          $('.graphic-image').removeClass('hidden');
-          $('.motion-image').addClass('hidden');
-          $('.interaction-image').addClass('hidden');
+          $('img.print').removeClass('hidden');
+          $('img.motion').addClass('hidden');
+          $('img.interaction').addClass('hidden');
       });
       $('.motion').click(function() {
-          $('.motion-image').removeClass('hidden');
-          $('.graphic-image').addClass('hidden');
-          $('.interaction-image').addClass('hidden');
+          $('img.print').addClass('hidden');
+          $('img.motion').removeClass('hidden');
+          $('img.interaction').addClass('hidden');
       });
       $('.interaction').click(function() {
-          $('.interaction-image').removeClass('hidden');
-          $('.graphic-image').addClass('hidden');
-          $('.motion-image').addClass('hidden');
+          $('img.print').addClass('hidden');
+          $('img.motion').addClass('hidden');
+          $('img.interaction').removeClass('hidden');
       });
       $('.all').click(function() {
-          $('.interaction-image').removeClass('hidden');
-          $('.graphic-image').removeClass('hidden');
-          $('.motion-image').removeClass('hidden');
+         $('img.print').removeClass('hidden');
+         $('img.motion').removeClass('hidden');
+         $('img.interaction').removeClass('hidden');
       });
-
     });
   });
 });

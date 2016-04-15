@@ -1,8 +1,7 @@
 /* Interaction Shapes */
 #interaction1 {
-	display: none;
-	top: 5%;
-    left: 102%;
+	top: 9%;
+    left: 48%;
     width: 25%;
 }
 #interaction2 {
@@ -20,10 +19,9 @@
 	display: none;
 }
 #interaction5{
-	
-	top:95%;
-	left:38%;
-	width:5%;
+	top: 110%;
+	left: 20%;
+	width: 7%;
 }
 #interaction6{
 	display: none;
@@ -31,29 +29,25 @@
 	left:85%;
 	width:5%;
 }
-#interaction7{
-	
-	top: 2%;
-    left: 30%;
-    width: 10%;
-}
-
 #interaction9{
 	display: none;
 	top:22%;
 	left:44%;
 	width:5%;
 }
-#motion3{
-	top: 19%;
-	left: 37%;
-	width: 3%;
-}
 #interaction10{
 	top:55%;
 	left:5%;
 	width:5%;
 }
+#interaction15{
+	top: 115%;
+    left: 42%;
+    width: 2%;
+}
+
+
+
 #interaction17{
 	top: 83%;
 	left: 15%;
@@ -68,7 +62,7 @@
 #interaction11,
 #interaction13,
 
-#interaction15,
+#interaction7,
 #interaction16,
 #interaction18,
 #interaction19{
@@ -87,8 +81,13 @@
 	left: -3%;
 }
 
+#motion3{
+	top: 10%;
+    left: 23%;
+    width: 3%;
+}
 #motion4{
-	top: 18%;
+	top: 10%;
 	left: 21%;
 	width: 4%;
 }
@@ -116,13 +115,18 @@
 	left:95%;
 	width:5%
 }
+
+#motion12{
+	width: 5%;
+	top: 105%;
+	left: 67%;
+}
 #motion17{
 	top: 63%;
     left: 90%;
     width: 6%;
 }
 #motion11,
-#motion12,
 #motion13,
 #motion14,
 #motion15,
@@ -133,10 +137,9 @@
 
 
 #print1{
-	
-	top:99%;
-	left:40%;
-	width:3%;
+    top: 112%;
+    left: 24%;
+    width: 3%;
 }
 #print2{
 	top: 94%;
@@ -176,11 +179,15 @@
 // 	width:3%;
 // }
 // Overlays print 1
-#print8{
-	display: none;
+#print7{
 	width:6%;
-	top:88%;
-	left:88%;
+	top:102%;
+	left:50%;
+}
+#print8{
+	width:6%;
+	top:105%;
+	left:51%;
 }
 #print9{
 	display: none;
@@ -195,9 +202,9 @@
 	width:3%;
 }
 #print11{
-	width: 5%;
-    top: 15%;
-    left: 90%;
+	width: 3%;
+    top: 12%;
+    left: 2%;
 }
 #print15{
 	top: 100%;
@@ -209,7 +216,6 @@
 	left:5%;
 	width:8%;
 }
-#print7,
 #print13,
 #print16,
 #print18,

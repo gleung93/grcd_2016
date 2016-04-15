@@ -12,7 +12,7 @@ $graphic: #EFBC1B;
 }
 
 body {
-	font-family: helvetica, arial, sans-serif;
+	font-family: "Helvetica neue", helvetica, arial, sans-serif;
 	color: $dark-gray;
 }
 
@@ -36,7 +36,9 @@ a{
     min-height: 1200px;
     padding: 2em;
     width: 100%;
-    background-image: url("/img/combined_pattern.png");
+    background-image: url("/img/combined_pattern2.png");
+    background-size: contain;
+    background-position: 2% 5%;
 }
 
 @media all and (max-width: 520px) {

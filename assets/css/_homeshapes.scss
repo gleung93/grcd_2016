@@ -36,7 +36,7 @@
 }
 .logo-wrapper{
 	max-width:1200px;
-	margin: 0 auto;
+	margin: 2em auto;
 	height:100%;
 }
 .shapes-wrapper{
@@ -56,19 +56,23 @@
 	// background-color: gray;
 	height:100%;
 	position: relative;
+	pointer-events:none;
 	.logo{
 		position: absolute;
 		display: inline-block;
 		top:40%;
 		width:100%;
-
+		.nopointer{
+			pointer-events:none;
+		}
 		img{
-
 			  mix-blend-mode: multiply;
+
 		}
 		.shapes{
 			display: inline-block;
 			position: absolute;
+			pointer-events:all;
 		}
 		#s2{
 			left: 57%;
@@ -139,6 +143,9 @@
 		&.small{
 			width: 18%;
 			margin-right: 0;
+			@media (max-width: 900px){
+				width:45%;
+			}
 			@media (max-width: 750px) {
 				width:100%;
 				display: block;
@@ -161,7 +168,7 @@
 			}
 		}
 		@media (max-width: 900px) {
-			width: 34%;
+			width: 80%;
 			display: inline-block;
 			padding: .75em;
 		}
@@ -177,8 +184,6 @@
 		@media (min-width: 1200px) {
 			margin-right: 14em;
 		}
-
-
 	}
 	@media (max-width: 750px) {
 			width:100%;

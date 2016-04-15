@@ -32,7 +32,7 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
     });
 
     //Hide Current profile link
-    $("[href]").each(function() {
+    $(".item[href]").each(function() {
     if (this.href == window.location.href) {
         $(this).addClass("activeProject");
         }

@@ -49,42 +49,45 @@
 
 .intro-wrapper{
   width:100%;
-  height:400px;
+  height:134px;
   overflow: hidden;
-  margin-top: 80px;
   position: relative;
-
+  @media (min-width: 1200px) {
+      height:70px;
+  }
 }
 .intro-wrapper img{
   position: absolute;
-  top:0;
+  top:5px;
   left:0;
-  width:101%;
+  width:102%;
   mix-blend-mode: multiply;
   transition: all .4s ease;
 }
 .intro-wrapper .text{
   position: absolute;
-  top:100px;
   left:0;
   width:100%;
-  z-index: 2;
   text-align: center;
 }
 .text-card{
   background-color: white;
-  padding: 3em;
   width: 50%;
   max-width: 850px;
   min-width: 500px;
   height: 240px;
-  border: 10px solid rgb(250,250,250);
   margin: 0 auto;
-  box-shadow: 0px 2px 25px 0px rgba(0,0,0,0.05);
-  .center{
-    margin-top: 1.5em;
-  }
+
 }
+.center{
+    margin-top: 1.5em;
+    text-align: center;
+    @media (max-width: 750px) {
+        text-align: left;
+        padding-left: 1em;
+
+      }
+  }
 .text-card h1{
   margin-top: 0;
   margin-bottom: .25em;
@@ -97,49 +100,94 @@ hr {
   margin-bottom: 1em;
 }
 .filter-home{
+  //position: relative;
   background-color: none;
-  /*border: 1px solid rgb(230,230,230);*/
   color:$light-gray;
   width: 23%;
   margin-right: 1%;
   display: inline-block;
   cursor: pointer;
-  // text-transform: uppercase;
   font-weight: bold;
   margin-bottom: 1.5em;
   font-size: 1.25em;
   background-repeat: no-repeat;
   background-size: 15%;
   background-position: left center;
-  transition: all .2s ease-in;
+  @include transition(all .2s ease-in);
 }
 
+.filter-home span {
+  position: relative;
+}
+
+.filter-home span:after {
+  content: "";
+  display: block;
+  //margin: 0 auto;
+  left: 0;
+  //right: 0;
+  //text-align: center;
+  height: 4px;
+  background-color: black;
+  opacity: 0;
+  position: absolute;
+  bottom: -5px;
+  width: 100%;
+  @include transition(all .2s ease-out);
+  @include transform(translateY(10px));
+}
+
+.filter-home:hover span:after,
+.filter-home.active span:after {
+  opacity: 1;
+  @include transform(translateY(0));
+}
+
+//Ask ryan about this one
 .hidden{
   opacity: 0;
-  -webkit-transform: rotate(20deg) scale(1.2);
-  transform: scale(1.2);
+  @include transform(scale(1.2) rotate(20deg));
 }
+
 .filter-home.graphic:hover{
-  color:#EFBD00;
+  color:$graphic;
 }
 .filter-home.graphic.active,
 {
-  color:#EFBD00;
+  color:$graphic;
 }
+.filter-home.graphic span:after {
+  background-color: $graphic;
+}
+
 .filter-home.motion:hover{
   color:#D83A91;
 }
 .filter-home.motion.active{
   color:#D83A91;
 }
+.filter-home.motion span:after {
+  background-color: $motion;
+}
+
 .filter-home.interaction.active{
   color:#57C1A5;
 }
 .filter-home.interaction:hover{
   color:#57C1A5;
 }
+.filter-home.interaction span:after {
+  background-color: $interaction;
+}
+
 .filter-home.all.active{
   color:#323123;
+}
+.filter-home.all:hover{
+  color:#323123;
+}
+.filter-home.all span:after {
+  @include linear-gradient(90deg, $graphic 0%, $graphic 33%, $motion 33%, $motion 66%, $interaction 66%);
 }
 
 a.item.Graphic:hover .name {
@@ -202,7 +250,8 @@ a.item.Motion:hover .name {
     padding:.25em;
   }
   .intro-wrapper{
-    height:450px;
+    height: 250px;
+
   }
   .text-card{
     width:100%;
@@ -211,6 +260,7 @@ a.item.Motion:hover .name {
     padding-top: 1em;
     height:350px;
     text-align: left;
+    border:none;
   }
   .filter-home{
     display: block;

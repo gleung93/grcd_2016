@@ -24,13 +24,25 @@ a{
 	position: relative;
 }
 
-//Video. Move to new file if too big
-.videoWrapper {
-  max-width: 1200px;
-  width: 80%;
-  height: auto;
-  position: absolute;;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+//Twitter
+#twitter-feed {
+    padding-top: 90px;
+    padding-bottom: 90px;
+    text-align: center;
+
+}
+
+.tweetWrapper {
+    min-height: 1200px;
+    padding: 2em;
+    width: 100%;
+    background-image: url("/img/combined_pattern.png");
+}
+
+@media all and (max-width: 520px) {
+  .tweetWrapper {
+      padding: 0;
+      width: 100%;
+      background-image: none;
+  }
 }

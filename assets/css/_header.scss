@@ -9,11 +9,12 @@ header{
 	z-index: 9999;
 	box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
 	@include transition(all 0.3s ease-out);
-	pointer-events:none;
+	pointer-events:auto;
 }
 header.landingStyle {
 	background: none;
 	box-shadow: none;
+	pointer-events:none;
 }
 
 header.landingStyle #img_wrap {
@@ -107,7 +108,7 @@ header.landingStyle #img_wrap {
   width: 22px;
   height: 2px;
   //border-radius: 1px;
-	@include transition(all 0.3s ease-out);
+	@include transition(all 0.2s ease-out);
 }
 
 //Test Fun hamburger
@@ -156,7 +157,22 @@ header.active .bottom-bar{
 
 	.menu{
     display: block;
+		pointer-events:auto;
+		cursor:pointer;
   }
+
+	header.landingStyle #img_wrap{
+		pointer-events: auto;
+		visibility: visible;
+		@include transition(all 0.3s ease-out);
+		@include transform(translateY(0));
+		opacity: 0;
+	}
+
+	header.landingStyle.active #img_wrap{
+		visibility: visible;
+		opacity: 1;
+	}
 
 	.navList ul {
 		width: 100%;
@@ -165,6 +181,7 @@ header.active .bottom-bar{
 		margin: 0;
 		overflow: hidden;
 		height: 0;
+		pointer-events:auto;
 		@include transition(all .3s ease-out);
 	}
 
@@ -197,6 +214,12 @@ header.active .bottom-bar{
 		height: 1px;
 		left:0;
 		background-color: $lightest-gray;
+	}
+
+	.navList a:hover:before{
+	  opacity: 0;
+	  height: 0;
+		@include transform(translateY(3px));
 	}
 
 	header.active ul {

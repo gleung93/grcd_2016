@@ -6,6 +6,7 @@ require.config
   shim:
     mixitup: ["jquery"]
     drag: ["jquery"]
+    magnific: ["jquery"]
 
 
 require ['app/main'], ($) ->

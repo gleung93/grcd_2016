@@ -4,14 +4,6 @@ block content
   .intro-container
     .shapes-wrapper
       +icons("interaction","7")
-      .drag.floating-items#i1
-        img(src="img/icons/interaction1.svg")
-      .drag.floating-items#i2
-        img(src="img/icons/interaction2.svg")
-      .drag.floating-items#i3
-        img(src="img/icons/interaction3.svg")
-      .drag.floating-items#i4
-        img(src="img/icons/interaction4.svg")
     .logo-wrapper
       .logo-container
         .logo
@@ -37,14 +29,10 @@ block content
           
         .col
           p.section-header Location
-          p.emphasized DAAP Aronoff Building </br> 2624 Clifton Avenue </br> Cincinnati, OH 45219
-
+          a(target="_blank", href="http://maps.google.com/?q=DAAP Aronoff Building 2624 Clifton Avenue Cincinnati, OH 45219")
+            p.emphasized DAAP Aronoff Building </br> 2624 Clifton Avenue </br> Cincinnati, OH 45219
+    
   .intro-wrapper
-    //
-      .DragBoundary
-        +icons("print", "17")
-        +icons("motion", "17")
-        +icons("interaction", "17")
     .text
       .text-card.drag
         h1 Meet the Class of 2016
@@ -80,6 +68,7 @@ block content
       .gap
       .gap
       .gap
+
 
 
 mixin icons(focus, total)

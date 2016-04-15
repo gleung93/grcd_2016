@@ -22,5 +22,5 @@ module.exports =
     sass(
       files: "assets/css/master.scss",
       out: 'css/master.css',
-      style: 'compressed'),
+      style: 'uncompressed'),
     contentful(config)]

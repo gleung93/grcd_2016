@@ -1,6 +1,17 @@
-define(["jquery", "mixitup", "drag"], function($) {
+define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
 
   $( document ).ready(function() {
+    //Lightbox Custom
+
+    //Mobile Navigation
+    $('.menu').click(function() {
+        $('header').toggleClass('active');
+    });
+    $('header.active ul').click(function() {
+        $('header').removeClass('active');
+        console.log("smallLink");
+    });
+
     //Firefox multiply fallback
     var FF = !(window.mozInnerScreenX == null);
     if(FF) {
@@ -11,7 +22,13 @@ define(["jquery", "mixitup", "drag"], function($) {
     Draggable.create(".drag", {
       throwProps: true,
       throwResistance: "2000",
-      bounds: document.getElementById("boundaries"),
+      bounds: $(".intro-container"),
+    });
+
+    //Lightbox
+    $('.popup-vimeo').magnificPopup({
+      closeBtnInside: false,
+      type:'iframe'
     });
 
     //Hide Current profile link

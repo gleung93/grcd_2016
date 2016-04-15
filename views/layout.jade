@@ -5,9 +5,8 @@ html
     meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
     meta(name='description', content='description of your site')
     meta(name='author', content= "author of the site")
-    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
     title= path
-    link(rel='stylesheet', href='css/master.css')
     link(rel='stylesheet', href='css/master.css')
     link(rel='icon', type='image/png', href='img/favicon.png')
   body
@@ -16,11 +15,37 @@ html
         a(href="index.html")
           img#animated(src="img/logoanimated.gif")
           img#static(src="img/logo.png")
-      ul.navList
-        li
-          a(href="video.html") Video
+      .navList
+        .menu
+          span.icon-bar.top-bar
+          span.icon-bar.middle-bar
+          span.icon-bar.bottom-bar
+        ul
+          li
+            a(href="video.html") News
+          li
+            a.popup-vimeo(href="https://vimeo.com/162584962") Video
+          li
+            a(href="video.html") Projects
+
+      .mobile
 
     block content
+    
+    footer.site-footer
+      #footer-logo
+        a(href="index.html")
+          img(src="img/logo-gray.png")
+      ul
+          li.social
+            a(href="https://www.facebook.com/grcd2016/")
+              img(src="img/facebook-logo.svg")
+          li.social
+            a(href="https://twitter.com/grcd_2016")
+              img(src="img/twitter-logo.svg")
+          li.social
+            a(href="https://www.instagram.com/grcd_2016")
+              img(src="img/instagram-logo.svg")
 
 
 script(data-main="js/app", src="//cdnjs.cloudflare.com/ajax/libs/require.js/2.1.9/require.min.js")

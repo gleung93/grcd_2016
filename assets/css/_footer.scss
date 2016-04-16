@@ -43,4 +43,10 @@
 .site-footer ul li img{
     height: 35px;
 		width: auto;
+    @include transition(all .2s ease-out);
+    @include transform(translateY(0));
+}
+
+.site-footer ul li img:hover{
+    @include transform(translateY(-7px));
 }

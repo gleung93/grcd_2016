@@ -292,7 +292,9 @@ a.item.Motion:active .name {
 }
 
 .card-wrapper{
-  transition: all 0.5s cubic-bezier(0.19, 1, 0.22, 1) 0s;
+  @include transition-property(all);
+  @include transition-duration(0.5s);
+  @include transition-timing-function(cubic-bezier(0.19, 1, 0.22, 1));
   border: 1px solid $lightest-gray;
 }
 .card-wrapper:hover{

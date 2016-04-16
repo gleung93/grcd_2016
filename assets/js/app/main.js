@@ -1,7 +1,6 @@
 define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
 
   $( document ).ready(function() {
-    //Lightbox Custom
 
     //Mobile Navigation
     $('.menu').click(function() {
@@ -9,7 +8,6 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
     });
     $('.popup-vimeo, .projectsAnchor').click(function() {
         $('header').removeClass('active');
-        console.log("smallLink");
     });
 
     //Firefox multiply fallback
@@ -28,7 +26,18 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
     //Lightbox
     $('.popup-vimeo').magnificPopup({
       closeBtnInside: false,
-      type:'iframe'
+      type:'iframe',
+      callbacks: {
+        open: function() {
+          //$("body").css({"height": "100%", "overflow": "hidden"});
+          //$('body').bind('touchmove', function(e){e.preventDefault()})
+        },
+        close: function() {
+          //$('body, #player').unbind('touchmove')
+          //$("body").css({"height": "initial", "overflow": "initial"});
+        }
+
+      }
     });
 
     //Hide Current profile link

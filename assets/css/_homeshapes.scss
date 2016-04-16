@@ -9,7 +9,7 @@
 		width:10%;
 		top: 0;
 		left: 0;
-		transition: opacity .4s ease-in;
+		@include transition(opacity .4s ease-in);
 	}
 
 }
@@ -79,14 +79,10 @@
 		.nopointer{
 			pointer-events:none;
 		}
-		img{
-			  mix-blend-mode: multiply;
-
-
-		}
 		.shapes{
 			display: inline-block;
 			position: absolute;
+			mix-blend-mode: multiply;
 			pointer-events:all;
 
 		}

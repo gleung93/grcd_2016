@@ -17,6 +17,10 @@
 
 .site-footer {
   background: $dark-gray;
+  @include animation-delay(1.0s);
+  @include animation-duration(0.5s);
+  @include animation-fill-mode(both);
+  @include animation-timing-function(easeOutQuint);
 }
 
 #footer-logo img{

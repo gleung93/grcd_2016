@@ -107,7 +107,7 @@
       $('#Container').mixItUp({
       	animation: {
         duration: 400,
-        effects: 'fade translateX(14%)',
+        effects: 'fade translateY(-14%)',
         easing: 'ease',
         },
         load: {
@@ -130,7 +130,7 @@
       $('#ContainerMore').mixItUp({
         animation: {
         duration: 300,
-        effects: 'fade translateX(14%)',
+        effects: 'fade translateY(-14%)',
         easing: 'ease',
         },
         load: {

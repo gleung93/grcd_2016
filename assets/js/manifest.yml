@@ -1,0 +1,6 @@
+# manifest.yml
+- lib/jquery-2.2.3.js
+- lib/drag.js
+- lib/mixitup.js
+- lib/magnific-popup.js
+- app/main.js

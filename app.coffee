@@ -5,6 +5,7 @@ contentful   = require 'roots-contentful'
 config       = require './contentful'
 marked       = require 'marked'
 sass		     = require 'roots-sass'
+js_pipeline  = require 'js-pipeline'
 
 module.exports =
   ignores: [
@@ -22,5 +23,9 @@ module.exports =
     sass(
       files: "assets/css/master.scss",
       out: 'css/master.css',
-      style: 'uncompressed'),
+      style: 'compressed'),
+    js_pipeline(
+      manifest: 'assets/js/manifest.yml',
+      out: 'js/build.js',
+      minify: true)
     contentful(config)]

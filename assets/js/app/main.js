@@ -1,5 +1,3 @@
-define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
-
   $( document ).ready(function() {
 
     //Mobile Navigation
@@ -123,7 +121,6 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
         },
         callbacks: {
           onMixEnd: function(state){
-            console.log(state.activeFilter),
             filterState = state.activeFilter
             // alert(filterState);
           },
@@ -147,7 +144,6 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
         },
         callbacks: {
           onMixEnd: function(state){
-            console.log(state.activeFilter),
             filterState = state.activeFilter
             // alert(filterState);
           },
@@ -176,4 +172,3 @@ define(["jquery", "mixitup", "drag", "magnific-popup"], function($) {
       });
     });
   });
-});

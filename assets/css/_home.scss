@@ -61,7 +61,7 @@
   left:0;
   width:102%;
   mix-blend-mode: multiply;
-  transition: all .4s ease;
+  @include transition(all .4s ease);
 }
 .intro-wrapper .text{
   position: absolute;
@@ -324,7 +324,7 @@ a.item.Motion:active .name {
 .card-content .name{
   font-size: 1.5em;
   font-weight: bold;
-  transition: all .1s ease-in;
+  @include transition(all .1s ease-in);
   color:#323132;
   padding-bottom: .5em;
   margin-top: 0;
